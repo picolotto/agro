@@ -1,4 +1,4 @@
-/* Resetando margens e padding */
+/* Reset básico e estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -6,80 +6,177 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background: #f7f7f7;
     color: #333;
-    padding: 0 20px;
 }
 
 /* Cabeçalho */
-header {
-    background-color: #006400; /* Verde escuro */
-    color: #fff;
-    padding: 20px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+.header .logo h1 {
+    font-size: 2.5em;
+}
+
+.header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.header nav ul li a:hover {
+    color: #ffbc00;
+    transition: color 0.3s ease;
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 198, 255, 0.9), rgba(0, 114, 255, 0.8));
+    color: white;
+    padding: 100px 30px;
     text-align: center;
+    border-bottom: 5px solid #ffbc00;
+    animation: fadeInUp 1.5s ease-out;
 }
 
-header .logo h1 {
+.hero-content h2 {
     font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideInLeft 1.5s ease-out;
 }
 
-header .logo p {
+.hero-content p {
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
 }
 
-/* Seções */
-section {
-    margin: 40px 0;
+.cta-button {
+    background-color: #ffbc00;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.intro h2, .valores h2, .galeria h2 {
-    font-size: 2em;
-    color: #006400;
+.cta-button:hover {
+    background-color: #ff9c00;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Seção de Valores */
+.valores {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 30px;
+    background: #e1f7f2;
+    text-align: center;
+    border-bottom: 5px solid #00c6ff;
+}
+
+.valor {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 30%;
+}
+
+.valor:hover {
+    transform: scale(1.05);
+}
+
+.valor-icon {
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
-.intro p {
-    font-size: 1.2em;
-    line-height: 1.5;
+.valor h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-/* Valores da conectividade */
-.valores ul {
-    list-style: none;
+.valor p {
+    font-size: 1em;
 }
 
-.valores li {
-    background-color: #e0e0e0;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+/* Galeria */
+.galeria {
+    padding: 50px 30px;
+    background: #fff;
+    text-align: center;
 }
 
-.valores li strong {
-    color: #006400;
+.galeria h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
-/* Galeria de imagens */
-.galeria .images {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.galeria img {
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
 }
 
 /* Rodapé */
 footer {
-    background-color: #006400;
-    color: #fff;
+    background: #0072ff;
+    color: white;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    margin-top: 10px;
 }
