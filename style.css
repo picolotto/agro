@@ -1,0 +1,85 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #006400; /* Verde escuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 3em;
+}
+
+header .logo p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Seções */
+section {
+    margin: 40px 0;
+}
+
+.intro h2, .valores h2, .galeria h2 {
+    font-size: 2em;
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Valores da conectividade */
+.valores ul {
+    list-style: none;
+}
+
+.valores li {
+    background-color: #e0e0e0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.valores li strong {
+    color: #006400;
+}
+
+/* Galeria de imagens */
+.galeria .images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #006400;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
