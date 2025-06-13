@@ -1,73 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    background: linear-gradient(135deg, #e0ffd6, #d6f0ff);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #333;
+    padding: 20px;
     text-align: center;
-    padding: 50px;
 }
 
 h1 {
-    color: #4CAF50;
-    font-size: 2.5rem;
+    color: #28a745;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #fff176;
 }
 
-.start-button {
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    border: none;
+h2 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.quiz {
+    background-color: #ffffffaa;
+    padding: 20px;
+    border: 2px dashed #4caf50;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.quiz p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #2e7d32;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    background-color: #c8e6c9;
+    padding: 10px;
     border-radius: 5px;
-    color: white;
-    font-size: 1.2rem;
+    transition: background 0.3s;
     cursor: pointer;
 }
 
-.start-button:hover {
-    background-color: #388E3C;
+label:hover {
+    background-color: #a5d6a7;
 }
 
-.game-container {
-    display: none;
-    position: relative;
-    margin-top: 20px;
+.result {
+    margin-top: 30px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 2px solid #ffeb3b;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #795548;
+    font-weight: bold;
 }
 
-.score, .timer {
-    font-size: 1.5rem;
-    margin: 20px;
-}
-
-.field {
-    width: 100%;
-    height: 400px;
-    background-image: url('campo.jpg'); /* Imagem do campo */
-    background-size: cover;
-    position: relative;
-    margin-top: 20px;
-}
-
-.item {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #00796b;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.item.found {
-    background-color: #ffeb3b;
-}
-
-.end-screen {
-    display: none;
-    text-align: center;
-}
-
-.end-screen h2 {
-    color: #00796b;
-}
-
-.end-screen p {
-    font-size: 1.5rem;
+footer {
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: #4e342e;
 }
